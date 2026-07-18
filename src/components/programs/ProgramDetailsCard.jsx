@@ -5,6 +5,7 @@ import {
   FaCalendarAlt,
   FaWhatsapp,
 } from "react-icons/fa";
+import { getImageUrl } from "../../utils/imageUrl";
 
 const PHONE_NUMBER = "+77612345678"; // Replace with your WhatsApp number
 
@@ -23,7 +24,7 @@ const ProgramDetailsCard = ({ program }) => {
     >
       {/* Program Image */}
       <img
-        src={`http://localhost:5000${program.image}`}
+        src={getImageUrl(program.image)}
         alt={program.title}
         className="w-full h-64 object-cover"
       />

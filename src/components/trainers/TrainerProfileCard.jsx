@@ -4,6 +4,7 @@ import {
   FaBriefcase,
   FaWhatsapp,
 } from "react-icons/fa";
+import { getImageUrl } from "../../utils/imageUrl";
 
 const PHONE_NUMBER = "254712345678"; // Replace with your WhatsApp number
 
@@ -22,7 +23,7 @@ const TrainerProfileCard = ({ trainer }) => {
     >
       {/* Trainer Image */}
       <img
-        src={`http://localhost:5000${trainer.image}`}
+        src={getImageUrl(trainer.image)}
         alt={trainer.name}
         className="w-full h-80 object-cover"
       />
